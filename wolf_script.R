@@ -3,8 +3,7 @@
 # author ben william - ben.williams@alaska.gov
 # 2015_07_24
 ############################################
-#Note: the paper uses AICc I've simply used AIC without the small sample correction
- #second note: I've added in a "location" and "ID" variable
+#Note: I've added in a "location" and "ID" variable
 #import data structured as a .csv 
 dat <- read.csv("dat.csv")
 #divide deer BMI by 1000 to match results in the paper

@@ -121,3 +121,11 @@ newd$pred <- predict(m7, newd, type='response')
 ggplot(newd, aes(deer,pred))+stat_summary(fun.data='mean_cl_boot', geom='smooth', B=1000,
                                           fill='#999999',alpha=.1,color='#999999', fill='gray')
 #taking into account the differences in "location" and the "sample sites" get a a way different relationship. Likely because what is being argued back and forth isn't meaningful based upon the data used in the analysis.
+
+#another option - robust regression
+library(MASS)
+rr <- rlm(wolves~deer, data=prune)
+data.frame(id = prune$id, resid = rr$resid, weight = rr$w)
+
+#also try bisquare weighting
+#add psi = psi.bisquare

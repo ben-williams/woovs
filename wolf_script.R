@@ -14,6 +14,7 @@ head(dat)
 
 # create pruned dataset
 prune <- subset(dat,removal!='30')
+p.prune - subset(dat, removal =='in')
 
 #data fields are:
    #population - the location of the population
